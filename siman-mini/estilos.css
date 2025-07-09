@@ -1,0 +1,367 @@
+:root {
+  --siman-red: #c8102e;
+  --text-dark: #333;
+  --footer-bg: #222;
+  --primary-font: Arial, sans-serif;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text-dark);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--siman-red);
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo { 
+  max-height: 40px; 
+  vertical-align: middle; 
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover { 
+  text-decoration: underline; 
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-right input[type="text"] {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.top-right input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(214, 0, 40, 0.5);
+}
+
+.login-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.login-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+main {
+  flex: 1;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.destacados {
+  padding: 2rem;
+}
+
+.destacados h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--siman-red);
+  text-align: center;
+}
+
+.destacados .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.destacados .product-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.destacados .product-card:hover {
+  transform: translateY(-5px);
+}
+
+.destacados .product-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.destacados .product-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.destacados .precio-anterior {
+  color: gray;
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.destacados .precio-oferta {
+  color: var(--siman-red);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.3rem 0 0;
+}
+
+.ofertas {
+  padding: 2rem;
+}
+
+.ofertas h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--siman-red);
+  text-align: center;
+}
+
+.ofertas .contenedor-ofertas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.ofertas .oferta {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.ofertas .oferta:hover {
+  transform: translateY(-5px);
+}
+
+.ofertas .oferta img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ofertas .oferta h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.ofertas .precio-anterior {
+  color: gray;
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.ofertas .precio-oferta {
+  color: var(--siman-red);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.3rem 0 0;
+}
+
+.electrodomesticos {
+  padding: 2rem;
+}
+
+.electrodomesticos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--siman-red);
+  text-align: center;
+}
+
+.electrodomesticos .contenedor-electrodomesticos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.electrodomesticos .producto-electrodomestico {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.electrodomesticos .producto-electrodomestico:hover {
+  transform: translateY(-5px);
+}
+
+.electrodomesticos .producto-electrodomestico img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.electrodomesticos .producto-electrodomestico h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.electrodomesticos .precio-anterior {
+  color: gray;
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.electrodomesticos .precio-oferta {
+  color: var(--siman-red);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.3rem 0 0;
+}
+
+
+.zapatos {
+  padding: 2rem;
+}
+
+.zapatos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--siman-red);
+  text-align: center;
+}
+
+.zapatos .contenedor-zapatos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.zapatos .producto-zapato {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.zapatos .producto-zapato:hover {
+  transform: translateY(-5px);
+}
+
+.zapatos .producto-zapato img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.zapatos .producto-zapato h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.zapatos .precio-anterior {
+  color: gray;
+  text-decoration: line-through;
+  margin: 0;
+}
+
+.zapatos .precio-oferta {
+  color: var(--siman-red);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.3rem 0 0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .top-right input[type="text"] {
+    width: 70%;
+  }
+
+  
+  .destacados .product-card img {
+    max-height: 150px;
+  }
+
+  .ofertas .oferta img {
+    max-height: 150px;
+  }
+
+  .electrodomesticos .producto-electrodomestico img {
+    max-height: 150px;
+  }
+
+  .zapatos .producto-zapato img {
+    max-height: 150px;
+  }
+}
